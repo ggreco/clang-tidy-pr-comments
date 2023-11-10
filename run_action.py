@@ -310,7 +310,7 @@ def generate_review_comments(
                     # A string belonging to both original and modified versions is the
                     # end of the section to replace
                     elif line.startswith("  "):
-                        if replacement_text is not None:
+                        if replacement_text is not None and start_line_num is not None:
                             assert (
                                 start_line_num is not None and end_line_num is not None
                             )
